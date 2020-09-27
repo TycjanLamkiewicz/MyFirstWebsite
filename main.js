@@ -16,8 +16,22 @@ if(minute < 10) minute = "0" + minute;
 var second = today.getSeconds();
 if(second < 10) second = "0" + second;
 
-document.getElementById("timer").innerHTML = day + "/" + month + "/" + year + " | " + hour + ":" + minute + ":" + second;
+document.getElementById("clock").innerHTML = day + "/" + month + "/" + year + " | " + hour + ":" + minute + ":" + second;
 
 setTimeout("countingDown()",1000);
+
+}
+
+
+
+
+function check()
+{
+    var liczba = document.getElementById("field").value;
+    
+    if (liczba>0) document.getElementById("result").innerHTML="dodatnia";
+    else if (liczba<0) document.getElementById("result").innerHTML="ujemna";
+    else if (liczba==0) document.getElementById("result").innerHTML="zero";
+    else document.getElementById("result").innerHTML="to nie jest liczba.";
 
 }
