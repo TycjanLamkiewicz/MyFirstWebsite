@@ -35,3 +35,11 @@ function check()
     else document.getElementById("result").innerHTML="to nie jest liczba.";
 
 }
+
+
+
+
+function printCurrentPage()
+{
+window.print();
+}
